@@ -1,0 +1,16 @@
+{
+  "name": "pancakeclone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.2"
+  },
+  "dependencies": {},
+  "description": ""
+}
