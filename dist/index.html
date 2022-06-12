@@ -1,43 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="author" content="Emirhan Yağcı">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+<html lang="en" class="">
+  <head>
+    <meta name="author" content="Emirhan Yağcı" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css" />
     <title>PancakeSwap</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--
+      orange ->background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
+      reject -> background: linear-gradient(rgb(237, 75, 158,.9) 0%, rgb(219, 98, 161) 51.17%, rgb(233, 120, 178) 100%);
+      resolve -> background: linear-gradient(rgb(49, 208, 170) 0%, rgb(49, 208, 170) 51.17%, rgb(49, 208, 170) 100%);
+    -->
+    <div class="alert absolute transition-all duration-500 left-1/2 translate-x-[-50%] -top-52 px-6 py-3 flex rounded-xl text-pDark z-10 font-semibold" style="background: linear-gradient(rgb(49, 208, 170) 0%, rgb(49, 208, 170) 51.17%, rgb(49, 208, 170) 100%);">
+      <div class="alertMassage mr-4">İŞlem başladı babalık Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, sequi?</div>
+      <div class="cursor-pointer closeAlert"><i class="fa-solid fa-xmark text-xl"></i></div>
+    </div>
     <!--NAVBAR SECTİON-->
-        <nav class="px-4 py-4 border-b-[1px] border-b-gray-300 border-solid flex justify-between items-center">
-            <div class="w-2/5 flex">
-                <img src="../img/svgexport-1.svg" alt="" width="34px" class="mr-11">
-                <div class="flex items-center text-[16px]">
-                    <div class="text-pActive-text font-[600] mr-7">Trade</div>
-                    <div class="text-pSoft-text mr-7">Earn</div>
-                    <div class="text-pSoft-text mr-7">Win</div>
-                    <div class="text-pSoft-text mr-7">NFT</div>
-                    <img src="../img/svgexport-4.svg" alt="">
-                </div>
+    <nav
+      class="bg-white px-4 py-4 border-b-[1px] border-b-gray-200 border-solid flex justify-between items-center "
+    > 
+    <div class="flex justify-between w-full">
+        <div class="w-2/5 flex">
+          <img
+            src="../img/svgexport-1.svg"
+            alt=""
+            width="34px"
+            class="mr-11 select-none pointer-events-none"
+          />
+          <div class="flex items-center text-[16px] cursor-pointer md:hidden">
+            <div class="text-pActive-text font-semibold mr-7 cursor-pointer">
+              Trade
             </div>
-            <div class="flex items-center">
-                <div class="flex items-center mr-6">
-                    <img src="../img/svgexport-5.svg" class="mr-2" alt="" width="24px">
-                    <span class="text-pSoft-text font-[600]">$4.236</span>
-                </div>
-                <div class="toggleTheme cursor-pointer mr-6 bg-[#666171] w-14 rounded-2xl py-[0.35rem] px-[0.35rem] flex justify-between relative items-center" style="box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px">
-                    <img src="../img/svgexport-33.svg" alt="" width="20px" class="">
-                    <img src="../img/svgexport-34.svg" alt="" width="20px" >
-                    <!--left 1px veya left 6px-->
-                    <div class="lightT activeTheme duration-500 transition-all w-6 absolute h-6 bg-white left-[28px] rounded-full flex items-center justify-center ">
-                        <img src="../img/svgexport-32.svg" alt="" width="18px">
+            <div class="text-pSoft-text mr-7 cursor-pointer">Earn</div>
+            <div class="text-pSoft-text mr-7 cursor-pointer">Win</div>
+            <div class="text-pSoft-text mr-7 cursor-pointer">NFT</div>
+            <img src="../img/svgexport-4.svg" alt="" />
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="flex items-center mr-6">
+            <img src="../img/svgexport-5.svg" class="mr-2" alt="" width="24px" />
+            <span class="text-pSoft-text font-semibold">$4.236</span>
+          </div>
+          <div
+            class="toggleTheme cursor-pointer mr-6 bg-[#bdc2c4] min-w-[56px] rounded-2xl py-[0.35rem] px-[0.35rem] flex justify-between relative items-center dark:bg-[#666171]"
+            style="box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px"
+          >
+            <img
+              src="../img/svgexport-33.svg"
+              alt=""
+              width="20px"
+              class="lightIcon"
+            />
+            <img
+              src="../img/svgexport-34.svg"
+              alt=""
+              width="20px"
+              class="darkIcon"
+            />
+            <!--left 1px veya left 6px-->
+            <div
+              class="lightT activeTheme duration-500 transition-all w-6 absolute h-6 bg-white left-[28px] rounded-full flex items-center justify-center dark:bg-[#27262c]"
+            >
+              <img src="../img/svgexport-32.svg" alt="" width="18px" />
+            </div>
+          </div>
+        
+        </div>
+    </div>
+    <!--change width when user connect with wallet()(NORMAL WİDTH WAS 32PX)
+      justify-around pl-5 m w-44 ml-5
+      2.div 2sm:hidden
+
+    -->
+    <!--BTN CONTANER-->
+    <div>
+    <!--CONNECT BTN-->
+     <div class="connectWallet w-36 bg-pBlue text-white font-semibold rounded-2xl text-center py-1 cursor-pointer transition-all duration-300 hover:bg-[#40cbd6] hover:translate-y-[-5px]" style="    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;">Connect Wallet</div>
+    <!--STATUS BOX-->
+     <div class="walletStat hidden flex items-center justify-around pl-7 m w-40 ml-5 text-white rounded-2xl cursor-pointer transition-all duration-300  2sm:w-16 text-center font-semibold tracking-wide py-1 relative  bg-[#eff4f5]" style="box-shadow: rgb(14 24 64 / 40%) 0px -1px 0px">
+        <div class="p-2 bg-white inline-block absolute left-[-20px] rounded-full" style="border-color: rgb(31, 199, 212);border-style: solid;border-width: 2px;"><img src="../img/WALLET.svg" alt="" width="24px" class=""></div>
+        <div class="2sm:hidden text-pDark">4444...4444</div> 
+        <div><img src="../img/svgexport-17.svg" alt=""></div>
+      </div>
+    </div>
+    </nav>
+
+    <!--NAVBAR SECTİON-->
+    <!--HEADER SECTİON-->
+    <header class="w-full h-12 flex justify-center bg-white mb-10">
+      <div class="h-full flex items-center">
+        <div class="selectedHeader text-[1rem] mr-6 relative text-pSoft-text">
+          Swap
+        </div>
+        <div class="text-[1rem] mr-6 relative text-pSoft-text">Limit</div>
+        <div class="text-[1rem] mr-6 relative text-pSoft-text">Liquidity</div>
+        <div class="text-[1rem] flex text-pSoft-text">
+          <span class="mr-[.07rem]">Perpetual</span>
+          <img src="../img/export.svg" alt="" width="18px" />
+        </div>
+      </div>
+    </header>
+    <!--HEADER SECTİON-->
+    <!--SWAP SECTİON-->
+    <section class="">
+      <div class="w-[100%] flex justify-center items-start ">
+        <!--left side (chart,history...)-->
+        <div class="chartWrap flex justify-between items-start 2xl:w-[90%] xl:w-[95%] lg:flex-col lg:items-center">
+          <!--chart-->
+          <div 
+            class="rounded-2xl p-5 bg-white w-[70%] xl:w-[65%] lg:w-[90%] mb-20 2sm:w-[100%]"
+            style="border: 1px solid rgb(231, 227, 235)"
+          >
+            <div class="flex justify-between 2sm:mb-4">
+              <div class="flex">
+                <img
+                  src="../img/svgexport-9.svg"
+                  alt=""
+                  width="24px"
+                  class="mr-1"
+                />
+                <img
+                  src="../img/svgexport-5.svg"
+                  alt=""
+                  width="24px"
+                  class="mr-3"
+                />
+                <span class="text-pDark font-semibold">BNB</span>
+                <span class="text-pDark" font-semibold>/</span>
+                <span class="text-pDark font-semibold">CAKE</span>
+                <img
+                  src="../img/svgexport-10.svg"
+                  alt=""
+                  width="20px"
+                  class="ml-4 mr-4"
+                />
+                <span class="text-pBlue text-[1rem] font-semibold 2sm:hidden">Basic</span>
+              </div>
+              <div>
+                <img src="../img/svgexport-11.svg" alt="" width="20px" />
+              </div>
+            </div>
+            <div class="flex justify-between items-center md:flex-col md:items-start ">
+              <div class="flex flex-col ">
+                <div class="flex items-end 2sm:flex-col 2sm:items-start">
+                  <div class="flex mb-[-8px]">
+                    <div
+                      class="text-[2.5rem] text-pDark font-semibold mb-[-10px] mr-2 lg: text-3xl"
+                    >
+                      66.20
                     </div>
+                    <div class="text-[1.25rem] text-pSoft-text font-semibold ">
+                      BNB
+                    </div>
+                    <div class="text-[1.25rem] text-pSoft-text font-semibold">
+                      /
+                    </div>
+                    <div
+                      class="text-[1.25rem] text-pSoft-text font-semibold mr-1 "
+                    >
+                      CAKE
+                    </div>
+                  </div>
+                  <div class="text-[#31d0aa] text-[1.25rem] font-semibold mb-[-8px] 2sm: mt-2">
+                    +1.315 (1.98%)
+                  </div>
                 </div>
-                <div class="text-white rounded-2xl w-36 text-center font-[600] tracking-wide py-1 bg-pBlue" style="box-shadow: rgb(14 24 64 / 40%) 0px -1px 0px ">Connect Wallet</div>
+                <div>
+                  <div
+                    class="chartDate tracking-wide text-pActive-text text-[.9rem] mt-4"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center bg-[#EFF4F5] rounded-3xl mt-3 2sm:w-[100%]"
+              >
+                <div
+                  class="chartHoursActive cursor-pointer text-pBlue font-semibold px-5 py-1 mr-2 "
+                >
+                  24H
+                </div>
+                <div class="text-pBlue cursor-pointer font-semibold px-5 py-1 mr-2">1W</div>
+                <div class="text-pBlue cursor-pointer font-semibold px-5 py-1 mr-2">1M</div>
+                <div class="text-pBlue cursor-pointer font-semibold px-5 py-1">1Y</div>
+              </div>
             </div>
-        </nav>
-    <!--NAVBAR SECTİON-->
+            <!--Chart Area-->
+            <div class="chartContainer" >
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <!--history-->
+            <!-- <div class="h-[400px] bg-orange-300"></div>
+          </div> -->
+        <!--right side (swap...)-->
+        <div
+          class="min-w-[328px] rounded-[28px] bg-white mb-20"
+          style="border: 1px solid rgb(231, 227, 235)"
+        >
+          <div class="p-6 pb-3 flex justify-between">
+            <img src="../img/svgexport-13.svg" width="24px" alt="" />
+            <span class="text-pDark font-semibold text-[1.25rem]">Limit</span>
+            <div class="flex">
+              <img src="../img/svgexport-7.svg" width="24px" alt="" />
+              <img src="../img/svgexport-14.svg" width="24px" alt="" />
+            </div>
+          </div>
+          <div
+            class="text-pSoft-text text-sm text-center pb-5"
+            style="border-bottom: 1px solid rgb(231, 227, 235)"
+          >
+            Place a limit order to trade at a set price
+          </div>
+          <div class="p-6 pb-4">
+            <div class="flex mb-4">
+              <img
+                src="../img/svgexport-9.svg"
+                width="24px"
+                alt=""
+                class="mr-2"
+              />
+              <span class="text-pDark font-semibold text-base">BNB</span>
+              <img src="../img/svgexport-17.svg" width="20px" alt="" />
+            </div>
+            <div class="mb-4">
+              <input
+                type="text"
+                placeholder="0.0"
+                style="box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px"
+                class="text-right bg-[#eeeaf4] w-full
+                p-5 rounded-2xl text-pDark placeholder-pSoft-text outline-none"
+              />
+            </div>
+            <div class="flex justify-center">
+              <div class="changeTokens cursor-pointer transition-all duration-300 w-[2rem] h-[2rem] bg-[#eeeaf4] rounded-full flex items-center justify-center">
+                <img src="../img/svgexport-18.svg" alt="">
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <img
+                src="../img/svgexport-5.svg"
+                width="24px"
+                alt=""
+                class="mr-2"
+              />
+              <span class="text-pDark font-semibold text-base">BNB</span>
+              <img src="../img/svgexport-17.svg" width="20px" alt="" />
+            </div>
+            <div class="mb-4">
+              <input
+                type="text"
+                placeholder="0.0"
+                style="box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px"
+                class="text-right bg-[#eeeaf4] w-full
+                p-5 rounded-2xl text-pDark placeholder-pSoft-text outline-none"
+              />
+            </div>
+            <div class="flex justify-between px-2 mb-12">
+              <span class="text-xs text-pActive-text font-semibold">Slippage Tolerance</span>
+              <span class="text-pBlue font-semibold">0.1%</span>
+            </div>
+            <div>
+              <div class="connectWallet py-3 text-center rounded-2xl bg-[#1fc7d4] cursor-pointer text-white"
+              style="box-shadow: rgb(14 14 44 / 40%) 0px 1px 0px"
+              >Connect Wallet</div>
+              <div class="swapConfirmBtn hidden py-3 text-center rounded-2xl cursor-pointer bg-[#e9eaeb] text-[#bdc2c4]">
+                Enter an amount
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--SWAP SECTİON-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

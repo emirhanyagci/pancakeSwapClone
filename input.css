@@ -7,9 +7,48 @@
 *{
     font-family: 'Kanit', sans-serif;
 }
+body{
+    background-color: #EDF5FF;
+}
 .toggleTheme:hover .activeTheme{
     box-shadow: rgb(118 69 217) 0px 0px 0px 4px, rgb(118 69 217 / 60%) 0px 0px 0px;
 }
 .lightT{
  left: 4px;
+}
+.selectedHeader{
+    @apply text-pActive-text font-[600];
+   
+}
+.chartHoursActive{
+    @apply bg-pBlue text-white rounded-2xl;
+}
+.selectedHeader::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -3px;
+    width: calc( 100% + 6px);
+    height: 4px;
+    background: rgb(31, 199, 212);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+   
+}
+.chartContainer{
+    width: calc(100% + 100px);
+    transform: translateX(-50px);
+}
+@media only screen and (max-width : 639px){
+    .chartContainer{
+        margin-top: 30px;
+        transform: translateX(-70px);
+    }
+}
+.chartWrap{
+    width: calc(100% - 366px);
+}
+.connectedWallet{
+    background-color: rgb(239, 244, 245);
+    color: rgb(40, 13, 95);
 }
