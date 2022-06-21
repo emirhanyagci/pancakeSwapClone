@@ -220,4 +220,10 @@ html.dark .chooseTokenBtn{
   html.dark .tokenItem:hover{
     background: rgb(8, 6, 11);
   }
- 
+  .helpBtn:hover svg{
+    fill: #A49CC8;
+  }
+  footer a{
+    font-size: 17px;
+    margin-bottom: 5px;
+  }

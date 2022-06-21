@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*
-! tailwindcss v3.1.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -620,6 +620,22 @@ video {
   top: 50%;
 }
 
+.-left-48{
+  left: -12rem;
+}
+
+.top-9{
+  top: 2.25rem;
+}
+
+.-right-5{
+  right: -1.25rem;
+}
+
+.top-4{
+  top: 1rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -658,6 +674,10 @@ video {
 
 .mr-\[\.07rem\]{
   margin-right: .07rem;
+}
+
+.mb-36{
+  margin-bottom: 9rem;
 }
 
 .mb-20{
@@ -706,6 +726,10 @@ video {
 
 .mb-12{
   margin-bottom: 3rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .inline-block{
@@ -872,6 +896,14 @@ video {
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -882,6 +914,28 @@ video {
 
 .justify-around{
   justify-content: space-around;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-7 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-scroll{
@@ -929,6 +983,14 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
+.border-b-4{
+  border-bottom-width: 4px;
+}
+
 .border-solid{
   border-style: solid;
 }
@@ -948,9 +1010,34 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.border-gray-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.border-gray-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
 .border-b-gray-200{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.border-b-orange-600{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(234 88 12 / var(--tw-border-opacity));
+}
+
+.border-b-slate-500{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(100 116 139 / var(--tw-border-opacity));
+}
+
+.border-b-slate-200{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
 
 .bg-white{
@@ -1007,6 +1094,16 @@ video {
   background-color: rgb(233 234 235 / var(--tw-bg-opacity));
 }
 
+.bg-\[rgb\(122\2c 110\2c 170\)\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(122 110 170 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#27262C\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 38 44 / var(--tw-bg-opacity));
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -1017,6 +1114,10 @@ video {
 
 .p-6{
   padding: 1.5rem;
+}
+
+.p-16{
+  padding: 4rem;
 }
 
 .px-6{
@@ -1069,6 +1170,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.py-\[\.85rem\]{
+  padding-top: .85rem;
+  padding-bottom: .85rem;
+}
+
 .pl-5{
   padding-left: 1.25rem;
 }
@@ -1095,6 +1201,10 @@ video {
 
 .pb-4{
   padding-bottom: 1rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
 }
 
 .text-center{
@@ -1204,6 +1314,16 @@ video {
 .text-\[\#bdc2c4\]{
   --tw-text-opacity: 1;
   color: rgb(189 194 196 / var(--tw-text-opacity));
+}
+
+.text-\[\#f4eeff\]{
+  --tw-text-opacity: 1;
+  color: rgb(244 238 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#ffb237\]{
+  --tw-text-opacity: 1;
+  color: rgb(255 178 55 / var(--tw-text-opacity));
 }
 
 .placeholder-pSoft-text::-moz-placeholder{
@@ -1518,6 +1638,15 @@ html.dark .tokenItem:hover{
   background: rgb(8, 6, 11);
 }
 
+.helpBtn:hover svg{
+  fill: #A49CC8;
+}
+
+footer a{
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
 .placeholder\:font-medium::-moz-placeholder{
   font-weight: 500;
 }
@@ -1543,6 +1672,15 @@ html.dark .tokenItem:hover{
 .hover\:bg-\[\#faf9fa\]:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(250 249 250 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#A49CC8\]:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(164 156 200 / var(--tw-bg-opacity));
+}
+
+.hover\:fill-\[\#A49CC8\]:hover{
+  fill: #A49CC8;
 }
 
 .dark .dark\:border-\[\#383241\]{
@@ -1744,4 +1882,3 @@ html.dark .tokenItem:hover{
     align-items: flex-start;
   }
 }
- 

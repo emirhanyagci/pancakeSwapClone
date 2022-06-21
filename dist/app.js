@@ -227,37 +227,61 @@ function swapTokenDatas(index) {
   }
 }
 
+function calculateRate(from) {
+  if (from == "first") {
+          firtsTokenPrice = Number(TokensDB[$firstToken][0].price);
+          twiceTokenPrice = Number(TokensDB[$twiceToken][0].price);
+
+          let tokensPriceRatio = firtsTokenPrice / twiceTokenPrice;
+
+          if (firtsTokenPrice > twiceTokenPrice) {
+            twiceTokenInp.value = (firstTokenInp.value * tokensPriceRatio).toFixed(6);
+          } else if (firtsTokenPrice < twiceTokenPrice) {
+            console.log(firstTokenInp.value, tokensPriceRatio);
+            twiceTokenInp.value = (firstTokenInp.value * tokensPriceRatio).toFixed(6);
+          } else {
+            twiceTokenInp.value = firstTokenInp.value;
+          }
+  } else if ((from == "twice")) {
+          firtsTokenPrice = Number(TokensDB[$firstToken][0].price);
+          twiceTokenPrice = Number(TokensDB[$twiceToken][0].price);
+
+          let tokensPriceRatio = twiceTokenPrice / firtsTokenPrice;
+          if (firtsTokenPrice > twiceTokenPrice) {
+            firstTokenInp.value = (twiceTokenInp.value * tokensPriceRatio).toFixed(6);
+          } else if (firtsTokenPrice < twiceTokenPrice) {
+            console.log(firstTokenInp.value, tokensPriceRatio);
+            firstTokenInp.value = (twiceTokenInp.value * tokensPriceRatio).toFixed(6);
+          } else {
+            firstTokenInp.value = twiceTokenInp.value;
+          }
+  }
+}
+
 var firtsTokenPrice = "";
 var twiceTokenPrice = "";
 //CALCULATE DİFFRENCE OF TOKENS PRİCE
 firstTokenInp.addEventListener("input", () => {
-  firtsTokenPrice = Number(TokensDB[$firstToken][0].price);
-  twiceTokenPrice = Number(TokensDB[$twiceToken][0].price);
+  // firtsTokenPrice = Number(TokensDB[$firstToken][0].price);
+  // twiceTokenPrice = Number(TokensDB[$twiceToken][0].price);
 
-  let tokensPriceRatio = firtsTokenPrice / twiceTokenPrice;
+  // let tokensPriceRatio = firtsTokenPrice / twiceTokenPrice;
 
-  if (firtsTokenPrice > twiceTokenPrice) {
-    twiceTokenInp.value = (firstTokenInp.value * tokensPriceRatio).toFixed(6);
-  } else if (firtsTokenPrice < twiceTokenPrice) {
-    console.log(firstTokenInp.value, tokensPriceRatio);
-    twiceTokenInp.value = (firstTokenInp.value * tokensPriceRatio).toFixed(6);
-  }else{
-    twiceTokenInp.value = firstTokenInp.value;
-  }
+  // if (firtsTokenPrice > twiceTokenPrice) {
+  //   twiceTokenInp.value = (firstTokenInp.value * tokensPriceRatio).toFixed(6);
+  // } else if (firtsTokenPrice < twiceTokenPrice) {
+  //   console.log(firstTokenInp.value, tokensPriceRatio);
+  //   twiceTokenInp.value = (firstTokenInp.value * tokensPriceRatio).toFixed(6);
+  // }else{
+  //   twiceTokenInp.value = firstTokenInp.value;
+  // }
+  calculateRate("first");
+  console.log("first");
 });
-twiceTokenInp.addEventListener("input", () => {
-  firtsTokenPrice = Number(TokensDB[$firstToken][0].price);
-  twiceTokenPrice = Number(TokensDB[$twiceToken][0].price);
 
-  let tokensPriceRatio = twiceTokenPrice / firtsTokenPrice;
-  if (firtsTokenPrice > twiceTokenPrice) {
-    firstTokenInp.value = (twiceTokenInp.value * tokensPriceRatio).toFixed(6);
-  } else if (firtsTokenPrice < twiceTokenPrice) {
-    console.log(firstTokenInp.value, tokensPriceRatio);
-    firstTokenInp.value = (twiceTokenInp.value * tokensPriceRatio).toFixed(6);
-  }else{
-    firstTokenInp.value  = twiceTokenInp.value;
-  }
+twiceTokenInp.addEventListener("input", () => {
+  calculateRate("twice");
+  console.log("twice");
 });
 
 const chooseTokenBtns = document.querySelectorAll(".choseTokenWrap");
@@ -305,6 +329,7 @@ chooseTokenBtns.forEach((item, index) => {
           $firstToken = selectedTokenName;
           whichChose = "";
           console.log("111");
+          calculateRate("first");
         } else if (whichChose === 1) {
           twiceTokenImg.src = selectedTokenSource;
           twiceTokenName.textContent = selectedTokenName;
@@ -312,7 +337,7 @@ chooseTokenBtns.forEach((item, index) => {
           $twiceToken = selectedTokenName;
           whichChose = "";
 
-          console.log("222");
+          calculateRate("twice");
         }
         //swap two time because we want set datas not change them place
         swapTokenDatas();
@@ -476,7 +501,6 @@ function createChart() {
         tooltip: {
           intersect: false,
         },
-       
       },
     },
   };
@@ -630,4 +654,3 @@ closeAlert.addEventListener("click", () => {
 //TODO KULLANCII DEĞER GİRDİĞİND EBUTONU VE BUTTONLA BİRLİTKE ÇIKAN ŞEYLERİ EKLE
 //TODO kullanici  dc olunca localstorage sil
 //TODO altta seçme ekle
-
