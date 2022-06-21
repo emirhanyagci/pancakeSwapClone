@@ -1823,11 +1823,23 @@ footer a{
   .xl\:w-\[65\%\]{
     width: 65%;
   }
+
+  .xl\:w-\[90\%\]{
+    width: 90%;
+  }
 }
 
 @media (max-width: 1023px){
   .lg\:w-\[90\%\]{
     width: 90%;
+  }
+
+  .lg\:w-\[100\%\]{
+    width: 100%;
+  }
+
+  .lg\:w-full{
+    width: 100%;
   }
 
   .lg\:flex-col{
@@ -1840,6 +1852,10 @@ footer a{
 }
 
 @media (max-width: 767px){
+  .md\:mb-5{
+    margin-bottom: 1.25rem;
+  }
+
   .md\:hidden{
     display: none;
   }
@@ -1848,8 +1864,26 @@ footer a{
     flex-direction: column;
   }
 
+  .md\:flex-wrap{
+    flex-wrap: wrap;
+  }
+
   .md\:items-start{
     align-items: flex-start;
+  }
+
+  .md\:items-center{
+    align-items: center;
+  }
+
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 639px){
+  .sm\:p-7{
+    padding: 1.75rem;
   }
 }
 
