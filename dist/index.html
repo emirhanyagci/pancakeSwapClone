@@ -9,42 +9,58 @@
     <link rel="stylesheet" href="output.css" />
     <title>PancakeSwap</title>
   </head>
-  <body>
-    <!--
+  <body class="transition-all " style="">
+    <div class="sk-circle">
+      <div class="sk-circle1 sk-child"></div>
+      <div class="sk-circle2 sk-child"></div>
+      <div class="sk-circle3 sk-child"></div>
+      <div class="sk-circle4 sk-child"></div>
+      <div class="sk-circle5 sk-child"></div>
+      <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+      <div class="sk-circle8 sk-child"></div>
+      <div class="sk-circle9 sk-child"></div>
+      <div class="sk-circle10 sk-child"></div>
+      <div class="sk-circle11 sk-child"></div>
+      <div class="sk-circle12 sk-child"></div>
+    </div>
+       <!--
       orange ->background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
       reject -> background: linear-gradient(rgb(237, 75, 158,.9) 0%, rgb(219, 98, 161) 51.17%, rgb(233, 120, 178) 100%);
       resolve -> background: linear-gradient(rgb(49, 208, 170) 0%, rgb(49, 208, 170) 51.17%, rgb(49, 208, 170) 100%);
     -->
-    <div class="alert absolute transition-all duration-500 left-1/2 translate-x-[-50%] -top-52 px-6 py-3 flex rounded-xl text-pDark z-10 font-semibold" style="background: linear-gradient(rgb(49, 208, 170) 0%, rgb(49, 208, 170) 51.17%, rgb(49, 208, 170) 100%);">
+    <div class="hidden appContainer">
+
+    <div class="alert absolute transition-all duration-500 left-1/2 translate-x-[-50%] -top-96 px-6 py-3 flex rounded-xl text-pDark z-10 font-semibold" style="background: linear-gradient(rgb(49, 208, 170) 0%, rgb(49, 208, 170) 51.17%, rgb(49, 208, 170) 100%);">
       <div class="alertMassage mr-4">İŞlem başladı babalık Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, sequi?</div>
       <div class="cursor-pointer closeAlert"><i class="fa-solid fa-xmark text-xl"></i></div>
     </div>
     <!--NAVBAR SECTİON-->
     <nav
-      class="bg-white px-4 py-4 border-b-[1px] border-b-gray-200 border-solid flex justify-between items-center "
+      class="bg-white px-4 py-4 border-b-[1px] border-b-gray-200 border-solid flex justify-between items-center dark:bg-[#27262C] dark:border-[#383241]"
     > 
     <div class="flex justify-between w-full">
         <div class="w-2/5 flex">
           <img
-            src="../img/svgexport-1.svg"
+            src="../img/ubxs-icon.svg"
             alt=""
             width="34px"
             class="mr-11 select-none pointer-events-none"
           />
           <div class="flex items-center text-[16px] cursor-pointer md:hidden">
-            <div class="text-pActive-text font-semibold mr-7 cursor-pointer">
+            <div class="text-pActive-text font-semibold mr-7 cursor-pointer dark:text-[#9a6aff]">
               Trade
             </div>
-            <div class="text-pSoft-text mr-7 cursor-pointer">Earn</div>
-            <div class="text-pSoft-text mr-7 cursor-pointer">Win</div>
-            <div class="text-pSoft-text mr-7 cursor-pointer">NFT</div>
+            <div class="text-pSoft-text mr-7 cursor-pointer dark:text-pDark-soft">Earn</div>
+            <div class="text-pSoft-text mr-7 cursor-pointer dark:text-pDark-soft">Win</div>
+            <div class="text-pSoft-text mr-7 cursor-pointer dark:text-pDark-soft">NFT</div>
             <img src="../img/svgexport-4.svg" alt="" />
           </div>
         </div>
         <div class="flex items-center">
           <div class="flex items-center mr-6">
-            <img src="../img/svgexport-5.svg" class="mr-2" alt="" width="24px" />
-            <span class="text-pSoft-text font-semibold">$4.236</span>
+            <img src="../img/ubxs-icon.svg" class="mr-2" alt="" width="24px" />
+            <span class="text-pSoft-text font-semibold dark:text-pDark-soft">$4.236</span>
           </div>
           <div
             class="toggleTheme cursor-pointer mr-6 bg-[#bdc2c4] min-w-[56px] rounded-2xl py-[0.35rem] px-[0.35rem] flex justify-between relative items-center dark:bg-[#666171]"
@@ -78,30 +94,39 @@
 
     -->
     <!--BTN CONTANER-->
-    <div>
+    <div class="relative">
     <!--CONNECT BTN-->
      <div class="connectWallet w-36 bg-pBlue text-white font-semibold rounded-2xl text-center py-1 cursor-pointer transition-all duration-300 hover:bg-[#40cbd6] hover:translate-y-[-5px]" style="    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;">Connect Wallet</div>
     <!--STATUS BOX-->
-     <div class="walletStat hidden flex items-center justify-around pl-7 m w-40 ml-5 text-white rounded-2xl cursor-pointer transition-all duration-300  2sm:w-16 text-center font-semibold tracking-wide py-1 relative  bg-[#eff4f5]" style="box-shadow: rgb(14 24 64 / 40%) 0px -1px 0px">
-        <div class="p-2 bg-white inline-block absolute left-[-20px] rounded-full" style="border-color: rgb(31, 199, 212);border-style: solid;border-width: 2px;"><img src="../img/WALLET.svg" alt="" width="24px" class=""></div>
-        <div class="2sm:hidden text-pDark">4444...4444</div> 
-        <div><img src="../img/svgexport-17.svg" alt=""></div>
+     <div class="walletStat hidden flex items-center justify-around pl-7 m w-40 ml-5 text-white rounded-2xl cursor-pointer transition-all duration-300  2sm:w-16 text-center font-semibold tracking-wide py-1 relative  bg-[#eff4f5] dark:bg-[#353547] " style="box-shadow: rgb(14 24 64 / 40%) 0px -1px 0px">
+        <div class="p-2 bg-white inline-block absolute left-[-20px] rounded-full dark:bg-[#08060b]" style="border-color: rgb(31, 199, 212);border-style: solid;border-width: 2px;"><img src="../img/WALLET.svg" alt="" width="24px" class=""></div>
+        <div class="2sm:hidden text-pDark dark:text-white">4444...4444</div> 
+        <div><img src="../img/svgexport-17.svg" class="walletStatImg" alt=""></div>
+      </div>
+      <div class="walletSetting hidden absolute right-0 top-[29px] pt-[20px] w-[130%] z-10">
+        <div class=" bg-white w-[100%] z-10  rounded-xl border-[1px] border-solid border-[#e7e3eb] dark:bg-[#27262C] dark:border-[#383241]">
+          <div class="w-disconnect cursor-pointer w-full px-8 py-4 flex justify-between text-pSoft-text dark:text-pDark-soft">
+            <span>Disconnect</span>
+            <img src="../img/logout.svg" alt="" width="20px">
+          </div>
+        </div>
       </div>
     </div>
     </nav>
 
     <!--NAVBAR SECTİON-->
     <!--HEADER SECTİON-->
-    <header class="w-full h-12 flex justify-center bg-white mb-10">
+    <header class="w-full h-12 flex justify-center bg-white mb-10 dark:bg-2xDark">
       <div class="h-full flex items-center">
-        <div class="selectedHeader text-[1rem] mr-6 relative text-pSoft-text">
+        <div class="selectedHeader text-[1rem] mr-6 relative text-pSoft-text dark:text-pDark-soft">
           Swap
         </div>
-        <div class="text-[1rem] mr-6 relative text-pSoft-text">Limit</div>
-        <div class="text-[1rem] mr-6 relative text-pSoft-text">Liquidity</div>
-        <div class="text-[1rem] flex text-pSoft-text">
+        <div class="text-[1rem] mr-6 relative text-pSoft-text dark:text-pDark-soft">Limit</div>
+
+        <div class="text-[1rem] mr-6 relative text-pSoft-text dark:text-pDark-soft">Liquidity</div>
+        <div class="text-[1rem] flex text-pSoft-text dark:text-pDark-soft">
           <span class="mr-[.07rem]">Perpetual</span>
-          <img src="../img/export.svg" alt="" width="18px" />
+          <img src="../img/export.svg" alt="" width="18px" class="exportImg" />
         </div>
       </div>
     </header>
@@ -113,60 +138,63 @@
         <div class="chartWrap flex justify-between items-start 2xl:w-[90%] xl:w-[95%] lg:flex-col lg:items-center">
           <!--chart-->
           <div 
-            class="rounded-2xl p-5 bg-white w-[70%] xl:w-[65%] lg:w-[90%] mb-20 2sm:w-[100%]"
-            style="border: 1px solid rgb(231, 227, 235)"
+            class="rounded-2xl p-5 border-[1px] border-solid border-[#e7e3eb] bg-white w-[70%] xl:w-[65%] lg:w-[90%] mb-20 2sm:w-[100%] dark:bg-chartDark dark:border-[#27262c]"
+         
           >
             <div class="flex justify-between 2sm:mb-4">
-              <div class="flex">
+              <div class="flex items-center tokensImgnName">
                 <img
-                  src="../img/svgexport-9.svg"
+                  src="../img/tokenImg/HAN.png"
                   alt=""
                   width="24px"
-                  class="mr-1"
+                  height="24px"
+                  class="mr-1 rounded-full max-h-6 max-w-[24px]"
                 />
                 <img
-                  src="../img/svgexport-5.svg"
+                  src="../img/ubxs-icon.svg"
                   alt=""
                   width="24px"
-                  class="mr-3"
+                  class="mr-3 rounded-full"
                 />
-                <span class="text-pDark font-semibold">BNB</span>
-                <span class="text-pDark" font-semibold>/</span>
-                <span class="text-pDark font-semibold">CAKE</span>
+                <span class="text-pDark font-semibold dark:text-white">HAN</span>
+                <span class="text-pDark font-semibold dark:text-white" >/</span>
+                <span class="text-pDark font-semibold dark:text-white">UBXS</span>
                 <img
                   src="../img/svgexport-10.svg"
                   alt=""
                   width="20px"
-                  class="ml-4 mr-4"
+                  class="ml-4 mr-4 cursor-pointer chartChange"
                 />
-                <span class="text-pBlue text-[1rem] font-semibold 2sm:hidden">Basic</span>
+                <span class="text-pBlue text-[1rem]  py-1 px-2 rounded-lg bg-basicBg font-semibold 2sm:hidden dark:bg-">Basic</span>
               </div>
               <div>
-                <img src="../img/svgexport-11.svg" alt="" width="20px" />
+                <img src="../img/svgexport-11.svg" class="swapImg" alt="" width="20px" />
               </div>
             </div>
             <div class="flex justify-between items-center md:flex-col md:items-start ">
               <div class="flex flex-col ">
                 <div class="flex items-end 2sm:flex-col 2sm:items-start">
-                  <div class="flex mb-[-8px]">
+                  <div class="flex mb-[-8px] tokensPrice">
                     <div
-                      class="text-[2.5rem] text-pDark font-semibold mb-[-10px] mr-2 lg: text-3xl"
+                      class="text-[2.5rem] text-pDark font-semibold mr-2 lg: text-3xl dark:text-white"
                     >
-                      66.20
+                      74.28
+                     
                     </div>
-                    <div class="text-[1.25rem] text-pSoft-text font-semibold ">
-                      BNB
+                    <div class="hiddenTwiceToken invisible absolute -left-96">0.014</div>
+                    <div class="text-[1.25rem] text-pSoft-text font-semibold translate-y-1 dark:text-[#b8add2]">
+                      HAN
                     </div>
-                    <div class="text-[1.25rem] text-pSoft-text font-semibold">
+                    <div class="text-[1.25rem] text-pSoft-text font-semibold translate-y-1 dark:text-[#b8add2]">
                       /
                     </div>
                     <div
-                      class="text-[1.25rem] text-pSoft-text font-semibold mr-1 "
+                      class="text-[1.25rem] text-pSoft-text font-semibold mr-1 translate-y-1 dark:text-[#b8add2]"
                     >
-                      CAKE
+                      UBXS
                     </div>
                   </div>
-                  <div class="text-[#31d0aa] text-[1.25rem] font-semibold mb-[-8px] 2sm: mt-2">
+                  <div class="text-[#31d0aa] text-[1.25rem] font-semibold 2sm: mt-2 translate-y-[6px] dark:text-[#ed4b9e] ">
                     +1.315 (1.98%)
                   </div>
                 </div>
@@ -177,20 +205,16 @@
                 </div>
               </div>
               <div
-                class="flex justify-between items-center bg-[#EFF4F5] rounded-3xl mt-3 2sm:w-[100%]"
+                class="chartTimeSet flex justify-between items-center border-[1px] border-solid border-[#e9eaeb] bg-[#EFF4F5] font-semibold rounded-3xl mt-3 2sm:w-[100%] dark:text-[#9a6aff] dark:bg-[#353547] dark:border-[#524b63]"
               >
-                <div
-                  class="chartHoursActive cursor-pointer text-pBlue font-semibold px-5 py-1 mr-2 "
-                >
-                  24H
-                </div>
-                <div class="text-pBlue cursor-pointer font-semibold px-5 py-1 mr-2">1W</div>
-                <div class="text-pBlue cursor-pointer font-semibold px-5 py-1 mr-2">1M</div>
-                <div class="text-pBlue cursor-pointer font-semibold px-5 py-1">1Y</div>
+                <div class="chartHourseBtn chartHoursActive cursor-pointer text-pBlue font-semibold px-5 py-1 mr-2 ">24H</div>
+                <div class="chartWeekBtn text-pBlue cursor-pointer font-semibold px-5 py-1 mr-2">1W</div>
+                <div class="chartMonthBtn text-pBlue cursor-pointer font-semibold px-5 py-1 mr-2">1M</div>
+                <div class="chartYearBtn text-pBlue cursor-pointer font-semibold px-5 py-1">1Y</div>
               </div>
             </div>
             <!--Chart Area-->
-            <div class="chartContainer" >
+            <div class="chartContainer pt-10 h-[410px]" >
               <canvas id="myChart"></canvas>
             </div>
           </div>
@@ -199,65 +223,90 @@
           </div> -->
         <!--right side (swap...)-->
         <div
-          class="min-w-[328px] rounded-[28px] bg-white mb-20"
-          style="border: 1px solid rgb(231, 227, 235)"
+          class="w-[328px] rounded-[28px] border-[1px] border-solid border-[#e7e3eb] bg-white mb-20 dark:bg-[#27262c] dark:border-[#372f47] 2sm:min-w-[97%]"
+          
         >
+        <!--GRAY BG-->
+        <div class="popupBackground cursor-pointer hidden absolute w-full h-[200%] bg-gray-900 opacity-50 left-0 top-0"></div>
+        
+        <!--user select a token pop  up-->
+     <div class="selectToken hidden w-[420px] h-[600px] bg-white fixed z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl dark:bg-[#27262C] dark:text-white"> 
+          <div class="selectToHeader p-6 rounded-t-3xl flex justify-between border-b-[1px] border-solid border-gray-200 dark:bg-[#27262C] dark:text-white">
+            <div class="text-pDark font-semibold text-[1.2rem] dark:text-white">Select a Token</div>
+            <img src="../img/bottomArrow.svg" alt="" class="closeTokenPopup cursor-pointer" style="filter: invert(99%) sepia(96%) saturate(5153%) hue-rotate(119deg) brightness(86%) contrast(88%);">
+          </div>
+          <div class="flex justify-center mt-6">
+            <input type="text"  placeholder="Search name or paste adress" class="searchTokenInp px-6 py-3 outline-none  w-[87%] rounded-2xl placeholder:font-medium bg-[#eeeaf4] dark:bg-[#372F47] dark:placeholder:text-pDark-soft dark:placeholder:font-medium dark:text-white" style="box-shadow:rgba(74 74 104 / 10%) 0px 2px 2px -1px inset">
+          </div>
+          <div class="tokensWrapper overflow-scroll overflow-x-hidden max-h-[400px] w-full mt-5">
+              <!-- Token item example
+              <div class="tokenItem transition-all cursor-pointer px-6 py-3 flex items-center hover:bg-[#faf9fa]">
+                <div class="mr-3"><img src="../img/ubxs-icon.svg" width="25px" alt=""></div>
+                <div class="flex flex-col">
+                  <span class="text-pDark font-semibold dark:text-white">UBXS</span>
+                  <span class="text-[#7a6eaa] text-[.90rem] dark:text-pDark-soft">Bixos Token</span>
+                </div>
+              </div> -->
+          </div>
+        </div>
+
           <div class="p-6 pb-3 flex justify-between">
-            <img src="../img/svgexport-13.svg" width="24px" alt="" />
-            <span class="text-pDark font-semibold text-[1.25rem]">Limit</span>
+            <img src="../img/svgexport-13.svg" width="24px" alt="" class="swapImg"/>
+            <span class="text-pDark font-semibold text-[1.25rem] dark:text-white">Limit</span>
             <div class="flex">
-              <img src="../img/svgexport-7.svg" width="24px" alt="" />
-              <img src="../img/svgexport-14.svg" width="24px" alt="" />
+              <img src="../img/svgexport-7.svg" width="24px" alt="" class="swapImg"/>
+              <img src="../img/svgexport-14.svg" width="24px" alt="" class="swapImg"/>
             </div>
           </div>
           <div
-            class="text-pSoft-text text-sm text-center pb-5"
+            class="text-pSoft-text text-sm text-center pb-5 dark:text-pDark-soft"
             style="border-bottom: 1px solid rgb(231, 227, 235)"
           >
             Place a limit order to trade at a set price
           </div>
           <div class="p-6 pb-4">
-            <div class="flex mb-4">
+            <div class="flex mb-4 choseTokenWrap cursor-pointer w-2/5">
               <img
-                src="../img/svgexport-9.svg"
+                src="../img/tokenImg/HAN.png"
                 width="24px"
                 alt=""
-                class="mr-2"
+                class="firstTokenImg mr-2 rounded-full"
               />
-              <span class="text-pDark font-semibold text-base">BNB</span>
-              <img src="../img/svgexport-17.svg" width="20px" alt="" />
+              <span class="firstTokenName text-pDark font-semibold text-base dark:text-white">HAN</span>
+              <img src="../img/svgexport-17.svg" class="chooseTokenBtn cursor-pointer" width="20px" alt="" />
+            
             </div>
             <div class="mb-4">
               <input
                 type="text"
                 placeholder="0.0"
                 style="box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px"
-                class="text-right bg-[#eeeaf4] w-full
-                p-5 rounded-2xl text-pDark placeholder-pSoft-text outline-none"
+                class="firstTokenInp text-right bg-[#eeeaf4] w-full
+                p-5 rounded-2xl text-pDark placeholder-pSoft-text outline-none dark:bg-[#372f47] dark:text-white"
               />
             </div>
             <div class="flex justify-center">
-              <div class="changeTokens cursor-pointer transition-all duration-300 w-[2rem] h-[2rem] bg-[#eeeaf4] rounded-full flex items-center justify-center">
+              <div class="changeTokens cursor-pointer transition-all duration-300 w-[2rem] h-[2rem] bg-[#eeeaf4] rounded-full flex items-center justify-center dark:bg-[#372f47]">
                 <img src="../img/svgexport-18.svg" alt="">
               </div>
             </div>
-            <div class="flex mb-4">
+            <div class="flex mb-4 choseTokenWrap cursor-pointer w-2/5 ">
               <img
-                src="../img/svgexport-5.svg"
+                src="../img/ubxs-icon.svg"
                 width="24px"
                 alt=""
-                class="mr-2"
+                class="twiceTokenImg mr-2 rounded-full"
               />
-              <span class="text-pDark font-semibold text-base">BNB</span>
-              <img src="../img/svgexport-17.svg" width="20px" alt="" />
+              <span class="twiceTokenName text-pDark font-semibold text-base dark:text-white">UBXS</span>
+              <img src="../img/svgexport-17.svg" class="chooseTokenBtn cursor-pointer" width="20px" alt="" />
             </div>
             <div class="mb-4">
               <input
                 type="text"
                 placeholder="0.0"
                 style="box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px"
-                class="text-right bg-[#eeeaf4] w-full
-                p-5 rounded-2xl text-pDark placeholder-pSoft-text outline-none"
+                class="twiceTokenInp text-right bg-[#eeeaf4] w-full
+                p-5 rounded-2xl text-pDark placeholder-pSoft-text outline-none dark:bg-[#372f47] dark:text-white"
               />
             </div>
             <div class="flex justify-between px-2 mb-12">
@@ -268,7 +317,7 @@
               <div class="connectWallet py-3 text-center rounded-2xl bg-[#1fc7d4] cursor-pointer text-white"
               style="box-shadow: rgb(14 14 44 / 40%) 0px 1px 0px"
               >Connect Wallet</div>
-              <div class="swapConfirmBtn hidden py-3 text-center rounded-2xl cursor-pointer bg-[#e9eaeb] text-[#bdc2c4]">
+              <div class="swapConfirmBtn hidden py-3 text-center rounded-2xl font-semibold cursor-pointer bg-[#e9eaeb] text-[#bdc2c4] dark:bg-[#3c3742] dark:text-[#666171] bg-">
                 Enter an amount
               </div>
             </div>
@@ -277,6 +326,7 @@
         </div>
       </div>
     </section>
+  </div>
     <!--SWAP SECTİON-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
