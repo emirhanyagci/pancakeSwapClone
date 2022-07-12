@@ -367,21 +367,21 @@ function setTheme(isDark) {
     virtualDatas = datas;
 
     HMTL.classList.add("dark");
-    lightIcon.src = "../img/darkSun.svg";
-    darkIcon.src = "../img/darkMoon.svg";
-    activeTheme.children[0].src = "../img/moon.svg";
+    lightIcon.src = "./img/darkSun.svg";
+    darkIcon.src = "./img/darkMoon.svg";
+    activeTheme.children[0].src = "./img/moon.svg";
     localStorage.setItem("isDark", "true");
     activeTheme.classList.remove("lightT");
-    walletStatImg.src = "../img/whiteArrowB.svg";
+    walletStatImg.src = "./img/whiteArrowB.svg";
     createChart();
   } else {
     virtualLabels = labels;
     virtualDatas = datas;
 
     HMTL.classList.remove("dark");
-    lightIcon.src = "../img/svgexport-33.svg";
-    darkIcon.src = "../img/svgexport-34.svg";
-    activeTheme.children[0].src = "../img/svgexport-32.svg";
+    lightIcon.src = "./img/svgexport-33.svg";
+    darkIcon.src = "./img/svgexport-34.svg";
+    activeTheme.children[0].src = "./img/svgexport-32.svg";
     localStorage.setItem("isDark", "false");
     activeTheme.classList.add("lightT");
     //setChartLinear("rgba(195, 246, 238,0.3)","rgba(129, 201, 184,0.3)","white");
@@ -512,12 +512,12 @@ function createChart() {
 changeTokenBtn.addEventListener("mouseenter", () => {
   changeTokenBtn.style.backgroundColor = "rgb(31, 199, 212)";
   changeTokenBtn.classList.remove("bg-[#eeeaf4]");
-  changeTokenBtn.children[0].src = "../img/switchToken.svg";
+  changeTokenBtn.children[0].src = "./img/switchToken.svg";
 });
 changeTokenBtn.addEventListener("mouseleave", () => {
   changeTokenBtn.style.backgroundColor = "";
   changeTokenBtn.classList.add("bg-[#eeeaf4]");
-  changeTokenBtn.children[0].src = "../img/svgexport-18.svg";
+  changeTokenBtn.children[0].src = "./img/svgexport-18.svg";
 });
 
 //wallet status aniatmion

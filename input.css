@@ -227,3 +227,11 @@ html.dark .chooseTokenBtn{
     font-size: 17px;
     margin-bottom: 5px;
   }
+
+
+
+  .swapValueInput::-webkit-outer-spin-button,
+  .swapValueInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
