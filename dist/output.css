@@ -1354,7 +1354,7 @@ html.dark body{
 }
 
 .chartWrap{
-  width: calc(80% - 206px);
+  width: calc(85%);
 }
 
 .connectedWallet{
